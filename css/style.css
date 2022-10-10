@@ -1,27 +1,133 @@
-
+/* basics */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap");
 
 :root {
-  
+  --primary: #559dd3;
+  --secondary: #f7b48c;
+  --black: #333333;
+  --grey: #eaeaea;
+  --white: #ffffff;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  img {
-    width: 100%;
-    max-width: 100%;
-  }
-  
-  html,
-  body {
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    width: 100vw;
-    height: 100vh;
-  }
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a:hover,
+a:focus {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+/* end of basics */
+
+/* start topbar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 21px 60px 22px 53px;
+}
+
+.topbar__logo {
+  max-width: 172.41px;
+}
+
+.topbar__btn {
+  max-width: 252px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 45px 11px 45px;
+}
+/* finish topbar */
+
+/* start banner */
+.banner {
+  background: url(../img/header-img.jpg);
+  position: relative;
+  height: 400px;
+}
+
+.banner__link {
+  text-decoration: none;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.banner__blur {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.banner__content {
+  text-decoration: none;
+  position: relative;
+}
+
+.banner__tittle {
+  max-width: 648px;
+  width: 100%;
+  font-family: "League Spartan", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 41px;
+}
+
+.banner__filter {
+  display: flex;
+  align-items: center;
+}
+
+.tag:last-child {
+  margin-right: 0;
+}
+
+.tag {
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 15px;
+}
+/* end banner */
+
+/* start card */
+.card {
+  margin-top: 84px;
+}
+
+.card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head__tittle {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+}
