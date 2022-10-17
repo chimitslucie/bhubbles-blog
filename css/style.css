@@ -41,7 +41,6 @@ body {
 
 a:hover,
 a:focus {
-    color: inherit !important;
     text-decoration: none !important;
 }
 
@@ -148,7 +147,6 @@ header .topbar {
 }
 
 .banner__title {
-    max-width: 648px;
     width: 100%;
     font-family: "League Spartan", sans-serif;
     font-size: 42px;
@@ -176,13 +174,25 @@ header .topbar {
     margin-right: 15px;
 }
 
+@media (min-width: 594px) {
+    .banner__title {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 760px) {
+    .banner .container {
+        width: 100%;
+    }
+}
+
 @media (max-width: 510px) {
     .banner {
         height: 255px;
     }
 
     .banner__title {
-        max-width: 430px;
+        width: 100%;
         font-size: 35px;
         margin-bottom: 15px;
     }
@@ -194,8 +204,7 @@ header .topbar {
     }
 
     .banner__title {
-        max-width: 245px;
-        font-size: 22px;
+        font-size: 25px;
     }
 
     .tag {
@@ -236,12 +245,21 @@ main .topbar {
     border: 1px solid var(--border-grey);
     border-radius: 10px;
     margin-bottom: 55px;
+    object-fit: cover;
 }
 
 .card:nth-child(7),
 .card:nth-child(8),
 .card:last-child {
     margin-bottom: 0;
+}
+
+.card__link {
+    color: var(--black);
+}
+
+.card__link:hover {
+    color: var(--black);
 }
 
 .card__header {
@@ -404,18 +422,23 @@ main .topbar {
         height: 3px;
         width: 75px;
     }
-}
 
-@media (max-width: 360px) {
+    .filter__text {
+        display: none;
+    }
+
     .card {
         margin-bottom: 30px;
+        width: 100%;
     }
 
     .card:nth-child(7),
     .card:nth-child(8) {
         margin-bottom: 30px;
     }
+}
 
+@media (max-width: 360px) {
     .card__header {
         max-height: 130px;
     }
@@ -532,6 +555,10 @@ main .topbar {
     padding: 10px 0 10px 15px;
 }
 
+.form-control:focus {
+    outline: none;
+}
+
 .newsletter__btn {
     width: 45px;
     height: 35px;
@@ -643,6 +670,12 @@ main .topbar {
 
     .footer .logo {
         max-width: 173px;
+        position: relative;
+        left: -10px;
+    }
+
+    .footer__company--text {
+        margin-left: 0;
     }
 
     .footer__menu {
