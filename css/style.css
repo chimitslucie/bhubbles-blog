@@ -17,6 +17,11 @@
     box-sizing: border-box;
 }
 
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 img {
     width: 100%;
     max-width: 100%;
@@ -37,6 +42,10 @@ html,
 body {
     font-family: "Poppins", sans-serif;
     color: var(--black);
+}
+
+body.filter-modal__open {
+    overflow: hidden;
 }
 
 a:hover,
@@ -545,7 +554,7 @@ main .topbar {
     margin-top: 20px;
 }
 
-.form-control {
+.footer .form-control {
     max-width: 225px;
     width: 100%;
     border: 1px solid var(--border-grey);
@@ -606,7 +615,7 @@ main .topbar {
         font-size: 12px;
     }
 
-    .form-control {
+    .footer .form-control {
         max-width: 170px;
     }
 }
@@ -705,7 +714,7 @@ main .topbar {
         margin: 15px auto 15px auto;
     }
 
-    .form-control {
+    .footer .form-control {
         max-width: 225px;
     }
 
@@ -722,7 +731,7 @@ body {
 }
 
 .filter-modal__blur {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(3px);
     position: absolute;
     top: 0;
@@ -735,20 +744,21 @@ body {
 .filter-modal {
     position: fixed;
     z-index: 1;
-    top: 300px;
+    top: 50vh;
     background-color: var(--white);
     left: 50%;
     max-width: 568px;
     width: 100%;
     padding: 40px;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
 }
 
 .filter-modal__icon {
     position: absolute;
     right: 15px;
     top: 12px;
-    font-size: 20px;
+    font-size: 25px;
     color: var(--black);
 }
 
@@ -768,6 +778,7 @@ body {
 .content__title {
     font-size: 20px;
     font-weight: 600;
+    margin-bottom: 18px;
 }
 
 .filter-modal__btn {
@@ -791,5 +802,116 @@ body {
     color: var(--primary);
     border: 1px solid var(--primary);
 }
+
+.filter-modal__content .form-control {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: 20px auto;
+    gap: 10px;
+}
+
+.filter-modal__content .form-control + .form-control {
+    margin-top: 10px;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--white);
+    margin: 0;
+    font: inherit;
+    color: var(--secondary);
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--secondary);
+    border-radius: 50%;
+    transform: translateY(2px);
+    display: grid;
+    place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 14px 14px var(--secondary);
+}
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+@media (max-width: 600px) {
+    .filter-modal {
+        max-width: 80%;
+    }
+
+    .filter-modal__content {
+        flex-direction: column;
+        max-height: 30vh;
+        overflow-y: scroll;
+    }
+
+    .filter-modal__category + .filter-modal__sector {
+        margin-top: 30px;
+    }
+
+    .filter-modal__btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 390px) {
+    .filter-modal__content .form-control {
+        font-size: 12px;
+    }
+}
+
 /* end selector filter */
 
+/* start article-topbar */
+.page-content .topbar {
+    padding: 20px 0 20px 0;
+}
+
+.topbar__border {
+    border: 1px solid var(--border-grey);
+    margin: 0;
+}
+/* end article-topbar */
+
+/* start article-main */
+.header {
+    margin-top: 60px;
+}
+
+.filters {
+    display: flex;
+    align-items: baseline;
+}
+
+.filters__text {
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.filters__point {
+    content: "";
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-radius: 100%;
+    background-color: var(--secondary);
+    margin: 0 22px;
+}
+
+.header__icon {
+    position: relative;
+    top: -88px;
+}
