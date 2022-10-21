@@ -5,7 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
         <link rel="stylesheet" href="./css/style.css" />
         <script
             src="https://kit.fontawesome.com/77538e526e.js"
@@ -119,18 +123,117 @@
                 <div class="gallery">
                     <h2 class="gallery__title bordered">Galerie</h2>
                     <div class="gallery__slider">
-                        <div>
-                            <iframe src="https://www.youtube.com/embed/d8CqIIn-yUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="gallery__slider--element">
+                            <iframe
+                                src="https://www.youtube.com/embed/d8CqIIn-yUk"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
                         </div>
-                        <div><img src="./img/pexels-christina-morillo-1181406 1.jpg" alt=""></div>
-                        <div><img src="./img/pexels-christina-morillo-1181406 1.jpg" alt=""></div>
+                        <div class="gallery__slider--element">
+                            <img
+                                src="./img/pexels-christina-morillo-1181406 1.jpg"
+                                alt=""
+                            />
+                        </div>
+                        <div class="gallery__slider--element">
+                            <img
+                                src="./img/pexels-christina-morillo-1181406 1.jpg"
+                                alt=""
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="footer__content">
+                        <div class="footer__company">
+                            <img
+                                src="./img/logo-bhubbles 1.svg"
+                                alt="logo"
+                                class="logo"
+                            />
+                            <p class="footer__company--text">
+                                1ère application métier qui simplifie la
+                                recherche de partenaires d'affaires en Afrique
+                                et en Europe.
+                            </p>
+                        </div>
+                        <div class="community">
+                            <img
+                                src="./img/communauty-trust.svg"
+                                alt="community-company"
+                                class="community__logo"
+                            />
+                        </div>
+                        <div class="footer__menu">
+                            <div class="footer__list">
+                                <h2 class="footer__title bordered bordered-sm">
+                                    Entreprise
+                                </h2>
+                                <a href="#" class="footer__text">À propos</a>
+                                <a href="#" class="footer__text"
+                                    >Nous contacter</a
+                                >
+                            </div>
+                            <div class="footer__list">
+                                <h2 class="footer__title bordered bordered-sm">
+                                    Légalité
+                                </h2>
+                                <a href="#" class="footer__text"
+                                    >Mentions légales</a
+                                >
+                                <a href="#" class="footer__text">CGV / CGU</a>
+                            </div>
+                            <div class="footer__newsletter">
+                                <h2 class="footer__title bordered bordered-sm">
+                                    Newsletter
+                                </h2>
+                                <form action="" method="get">
+                                    <div class="form-group">
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            placeholder="Votre email"
+                                            class="form-control"
+                                        />
+                                        <button
+                                            type="submit"
+                                            class="newsletter__btn"
+                                        >
+                                            <i
+                                                class="fa-solid fa-arrow-right newsletter__icon"
+                                            ></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <p class="copyright__text">
+                            2022 © Bhubbles - Tous droits réservés.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous"
+        ></script>
+        <script
+            type="text/javascript"
+            src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        ></script>
         <script src="./js/main.js"></script>
     </body>
 </html>
